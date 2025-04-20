@@ -1,0 +1,152 @@
+body{
+    text-align: center; /* Alinhamento dos elementos do Body  */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(213, 212, 212);
+}
+
+h1{
+    font-size: 42px; /* Tamanho do texto  */
+}
+
+/* --- Os Botões ---  */
+
+#botoes-container button{
+    border: none;
+    padding: 10px 15px; /* Distância de cima-embaixo e esqueda-direita*/
+    margin: 0 10px;
+    border: solid black 1px;
+}
+
+/* --- O Jogo ---  */
+
+#container{
+    display: flex;
+    width: 300px; /* Largura */
+    margin: 0;
+    flex-direction: row; /* Estamos dizendo que a direção é a linha */
+    flex-wrap: wrap; /* Vai jogar um quadrado para baixo do outro */
+    position: relative; /* Centralizando uma div de posição relativa */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.caixas{ 
+    height: 100px; /* Altura */
+    border: 5px solid black;
+    box-sizing: border-box; /* É responsável por dizer que temos no máximo 100 de largura e não 100 + borda */
+    flex: 1 1 33%; /* Estamos usando 3 propriedades do flex -> flex-grow, flex-shrink e flex-basis (respectivamente) */
+}
+
+/* Deixando as bordas iguais - Bordas de fora*/
+
+#caixa-1, #caixa-2, #caixa-3{
+    border-top: 5px solid black;
+}
+
+#caixa-4, #caixa-5, #caixa-6{
+    border-top: 1px solid black;
+}
+
+#caixa-7, #caixa-8, #caixa-9{
+    border-top: 1px solid black;
+}
+
+/* Deixando as bordas iguais - Bordas do meio */
+/* Separei por linhas */
+
+#caixa-1, #caixa-2{
+    border-right: 1px solid black;
+}
+
+#caixa-4, #caixa-5{
+    border-right: 1px solid black;
+}
+
+#caixa-7, #caixa-8{
+    border-right: 1px solid black;
+}
+
+/* Estilizando os simbolos */
+
+.x{
+    font-size: 65px;
+    color: rgb(30, 123, 146);
+    display: inline-block; /* Funciona como um bloco que aceita elementos na mesma linha */
+    line-height: 100px; /* Centralizando ele no bloco com 100 de altura */
+}
+
+.o{
+    width: 40px;
+    height: 40px;
+    border: 5px solid rgb(153, 45, 104);
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 17px; /* Garantindo a distância do topo */
+}
+
+/* Estilizando a classe de Esconder */
+
+.escondido{
+    display: none !important;
+}
+
+/* Estilizando o Placar */
+
+#resultado-container-base{
+    width: 100%; /* Usamos 100% para deixa-lo centralizado no meio da tela, é relativo pois depende do tamanho da tela */
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilizando o conteúdo do placar */
+#resultado-container{
+    border: solid black 2px;
+    min-width: max-content; /* Ajusta a largura ao conteúdo */
+    background-color: #f5f8b4; 
+    padding: 10px; /* Espaço interno */
+    height: 40px;
+    display: inline-flex; /* É flexível, precisamos dele para usar o align-items, também alinha os filhos por linha  */
+    align-items: center; /* Centraliza verticalmente os elementos  */
+    box-sizing: border-box; /* Diz que o padding está incluso no tamanho, não conta os "extras"  */
+    border-radius: 3px; /* Faz ar bordas ficarem arredondadas  */
+    font-size: 20px;
+}
+
+#resultado-container h3{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.caixa-resultado{
+    margin: 0 20px; /* Afastando os dois placares */
+}
+
+#x-placar{
+    color: rgb(30, 123, 146);
+    margin-right: 5px;
+}
+
+#o-placar{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 2px solid rgb(153, 45, 104);
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+/* Estilizando a Mensagem de Vitoria */
+
+#mensagem p{
+    position: absolute; /* Vai ficar na frente de tudo */
+    margin-left: auto; /* Nas próximas 3 linhas estamos centralizando ele */
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 150px;
+    width: 500px;
+    font-size: 50px;
+    background-color: black;
+    color: white;
+    padding: 20px;
+}

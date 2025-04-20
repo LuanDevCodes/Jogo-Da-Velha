@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Projeto V.01</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Jogo da Velha 🎮</h1>
+    <div id="botoes-container">
+        <button id="2-jogadores">2 Jogadores</button>
+        <button id="ai-jogador">Contra IA - Aleatória</button>
+    </div>
+
+    <!-- Os Quadradinhos do jogo -->
+    <br>
+    <div id="container" class="escondido"> <!-- Vai ter um CSS que vai esconder os elementos da tela -->
+        <div class="caixas" id="caixa-1"></div>
+        <div class="caixas" id="caixa-2"></div>
+        <div class="caixas" id="caixa-3"></div>
+        <div class="caixas" id="caixa-4"></div>
+        <div class="caixas" id="caixa-5"></div>
+        <div class="caixas" id="caixa-6"></div>
+        <div class="caixas" id="caixa-7"></div>
+        <div class="caixas" id="caixa-8"></div>
+        <div class="caixas" id="caixa-9"></div>
+    </div>
+        
+    <!-- A parte dos resultados -->
+    <div id="resultado-container-base"> <!-- Tive que criar mais uma Div para poder estilizar os elementos melhor -->
+        <div id="resultado-container" class="escondido">
+            <h3>Placar:</h3>
+                <span class="caixa-resultado"> <!-- Span é uma classe genérica de container, não quebra a linha, é inline -->
+                    <span id="x-placar">X</span>: <!-- Os dois pontos são o que vai aparecer entre um e outro -->
+                        <span id="placar-1">0</span>
+                </span>
+                <span class="caixa-resultado">
+                    <span id="o-placar"></span>: <!-- Não colocamos texto aqui pois vamos estilizar o O via CSS -->
+                        <span id="placar-2">0</span>
+                </span>
+        </div>
+    </div>
+        
+    <!-- Os elementos do jogo, X e O -->
+    <div class="escondido">
+        <div class="x">X</div>
+        <div class="o"></div>
+    </div>
+
+        <!-- Mensagens que vão ser apresentadas -->
+    <div id="mensagem" class="escondido">
+        <p>Teste</p>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
